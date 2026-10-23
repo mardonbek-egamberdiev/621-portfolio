@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mardonbek Egamberdiyev — Full-stack dasturchi</title>
+  <meta name="description" content="Mardonbek Egamberdiyev — Toshkentlik full-stack dasturchi. Loyihalar, tajriba va aloqa.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <!-- Mavzu (theme) sahifa chizilishidan oldin qoʻllanadi, “miltillash” boʻlmasligi uchun -->
+  <script>
+    try {
+      var t = localStorage.getItem('me-theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+      var l = localStorage.getItem('me-lang');
+      if (l) document.documentElement.setAttribute('lang', l);
+    } catch (e) {}
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('intro');
+      setTimeout(function () { document.documentElement.classList.add('ready'); }, 2500);
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Arka shaklidagi (peshtoq) kesish maskasi -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <defs>
+      <clipPath id="arch" clipPathUnits="objectBoundingBox">
+        <path d="M0,1 L0,0.42 C0,0.2 0.22,0.07 0.5,0 C0.78,0.07 1,0.2 1,0.42 L1,1 Z"/>
+      </clipPath>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main" data-i18n="skip">Asosiy qismga oʻtish</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Asosiy">
+      <a href="#top" class="logo" aria-label="Bosh sahifa">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M20 2 38 20 20 38 2 20Z"/><path d="M20 11 29 20 20 29 11 20Z"/></svg>
+        </span>
+        <span class="logo-text">Mardonbek</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-i18n="nav.about">Men haqimda</a></li>
+        <li><a href="#work" data-i18n="nav.work">Loyihalar</a></li>
+        <li><a href="#path" data-i18n="nav.path">Tajriba</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Aloqa</a></li>
+      </ul>
+
+      <div class="nav-tools">
+        <div class="lang" role="group" aria-label="Til / Language">
+          <button type="button" data-lang="uz" aria-pressed="true">UZ</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Mavzuni almashtirish">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z"/></svg>
+        </button>
+
+        <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Menyu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-name">
+      <canvas class="hero-pattern" id="hero-pattern" aria-hidden="true"></canvas>
+
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-hello" data-i18n="hero.hello">Salom, men</p>
+          <h1 class="hero-name" id="hero-name">
+            <span class="line">Mardonbek</span>
+            <span class="line">Egamberdiyev</span>
+          </h1>
+          <p class="hero-role" data-i18n="hero.role">Full-stack dasturchi</p>
+          <p class="hero-lead" data-i18n="hero.lead">Murakkab gʻoyalarni tez, qulay va ishonchli veb-mahsulotlarga aylantiraman. Toshkentdan turib butun dunyo bilan ishlayman.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work" data-i18n="hero.cta1">Loyihalarni koʻrish</a>
+            <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta2">Bogʻlanish</a>
+          </div>
+        </div>
+
+        <figure class="hero-portrait">
+          <div class="arch-outline" aria-hidden="true"></div>
+          <div class="arch-photo">
+            <img src="images/profile.png" alt="Mardonbek Egamberdiyev portreti" width="416" height="553">
+          </div>
+          <figcaption class="status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.status">Yangi loyihalarga ochiqman</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="hero-hint" data-i18n="hero.hint">Sichqonchani naqsh ustida yuritib koʻring</p>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <h2 class="h2" id="about-title" data-i18n="about.title">Kod — mening ona tilimdan keyingi tilim</h2>
+          <p data-i18n="about.p1">4 yildan ortiq vaqt davomida veb-ilovalar, admin panellar va API’lar yaratib kelaman. Menga eng yoqadigani — chalkash jarayonni bir necha bosishda bajariladigan oddiy interfeysga aylantirish.</p>
+          <p data-i18n="about.p2">Ishimda uchta narsaga eʼtibor beraman: kod oʻqilishi oson boʻlsin, sahifa tez ochilsin va foydalanuvchi hech qachon adashmasin.</p>
+        </div>
+
+        <div class="skills">
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML / CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Tailwind</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <ul>
+              <li>Node.js</li><li>Express</li><li>Python</li><li>PostgreSQL</li><li>MongoDB</li><li>REST API</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="about.tools">Asboblar</h3>
+            <ul>
+              <li>Git</li><li>Docker</li><li>Linux</li><li>Figma</li><li>CI/CD</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="h2" id="work-title" data-i18n="work.title">Tanlangan loyihalar</h2>
+          <p class="section-sub" data-i18n="work.sub">Har bir loyiha — real muammo va unga topilgan yechim.</p>
+        </div>
+
+        <div class="projects">
+          <article class="project project--wide">
+            <a class="project-media" href="#" aria-label="Bozor loyihasini ochish">
+              <img src="images/projects/project-1.svg" alt="" loading="lazy" width="1200" height="750">
+            </a>
+            <div class="project-body">
+              <h3>Bozor</h3>
+              <p data-i18n="work.p1">Mahalliy doʻkonlar uchun onlayn savdo platformasi: katalog, savat, toʻlov va buyurtmalarni kuzatish.</p>
+              <ul class="tags"><li>Next.js</li><li>Node.js</li><li>PostgreSQL</li></ul>
+            </div>
+          </article>
+
+          <article class="project">
+            <a class="project-media" href="#" aria-label="Davomat loyihasini ochish">
+              <img src="images/projects/project-2.svg" alt="" loading="lazy" width="1200" height="750">
+            </a>
+            <div class="project-body">
+              <h3>Davomat</h3>
+              <p data-i18n="work.p2">Maktab va oʻquv markazlari uchun davomat hamda baholash tizimi.</p>
+              <ul class="tags"><li>React</li><li>Express</li><li>MongoDB</li></ul>
+            </div>
+          </article>
+
+          <article class="project">
+            <a class="project-media" href="#" aria-label="Yoʻlchi loyihasini ochish">
+              <img src="images/projects/project-3.svg" alt="" loading="lazy" width="1200" height="750">
+            </a>
+            <div class="project-body">
+              <h3>Yoʻlchi</h3>
+              <p data-i18n="work.p3">Shahar ichida yuk tashish uchun buyurtma va haydovchilarni boshqarish paneli.</p>
+              <ul class="tags"><li>TypeScript</li><li>Maps API</li><li>Docker</li></ul>
+            </div>
+          </article>
+
+          <article class="project project--wide">
+            <a class="project-media" href="#" aria-label="Hisob loyihasini ochish">
+              <img src="images/projects/project-4.svg" alt="" loading="lazy" width="1200" height="750">
+            </a>
+            <div class="project-body">
+              <h3>Hisob</h3>
+              <p data-i18n="work.p4">Kichik biznes uchun daromad va xarajatlarni grafiklarda koʻrsatuvchi moliyaviy dashboard.</p>
+              <ul class="tags"><li>React</li><li>Chart.js</li><li>Python</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PATH (timeline) ============ -->
+    <section class="section path" id="path" aria-labelledby="path-title">
+      <div class="wrap">
+        <h2 class="h2" id="path-title" data-i18n="path.title">Bosib oʻtgan yoʻlim</h2>
+
+        <ol class="timeline">
+          <li>
+            <span class="t-year">2024 — <span data-i18n="path.now">hozir</span></span>
+            <div>
+              <h3 data-i18n="path.j1.t">Full-stack dasturchi</h3>
+              <p class="t-place">IT kompaniya, Toshkent</p>
+              <p data-i18n="path.j1.d">Mijozlar uchun veb-platformalarni boshidan oxirigacha loyihalayman va ishga tushiraman.</p>
+            </div>
+          </li>
+          <li>
+            <span class="t-year">2022 — 2024</span>
+            <div>
+              <h3 data-i18n="path.j2.t">Frontend dasturchi</h3>
+              <p class="t-place">Startap</p>
+              <p data-i18n="path.j2.d">React’da interfeyslar yaratdim, sahifa yuklanish tezligini ikki baravar oshirdim.</p>
+            </div>
+          </li>
+          <li>
+            <span class="t-year">2021 — 2022</span>
+            <div>
+              <h3 data-i18n="path.j3.t">Frilans</h3>
+              <p class="t-place" data-i18n="path.j3.p">Mustaqil</p>
+              <p data-i18n="path.j3.d">Kichik bizneslar uchun saytlar va landing sahifalar yaratdim.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 class="h2 contact-title" id="contact-title" data-i18n="contact.title">Keling, birga nimadir quramiz</h2>
+          <p data-i18n="contact.lead">Loyiha, hamkorlik yoki shunchaki savol boʻlsa — yozing. Odatda bir kun ichida javob beraman.</p>
+
+          <div class="email-row">
+            <a class="email" href="mailto:mardonbek@example.com" id="email-link">mardonbek@example.com</a>
+            <button type="button" class="copy-btn" id="copy-btn" data-i18n="contact.copy">Nusxalash</button>
+          </div>
+
+          <ul class="socials">
+            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://t.me/" target="_blank" rel="noopener">Telegram</a></li>
+            <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <label>
+            <span data-i18n="form.name">Ismingiz</span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            <span data-i18n="form.msg">Xabar</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button type="submit" class="btn btn-primary" data-i18n="form.send">Xabarni yuborish</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Mardonbek Egamberdiyev</p>
+      <p data-i18n="footer.made">Toshkentda, kod va choy bilan yaratildi.</p>
+      <a href="#top" data-i18n="footer.top">Yuqoriga qaytish</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
